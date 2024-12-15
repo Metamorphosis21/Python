@@ -1,0 +1,8 @@
+print((len ("python")==len ("dragon")))
+print(len('mango') == len('avocado'))
+print('on in python'and 'on' in 'dragon') 
+print(float(len("python")))
+str(float(len("python")))
+print("on" in "python" and "on" in "dragon")
+print((7//3)==int(2.7))
+print(int(9.8)==10)
