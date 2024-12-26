@@ -12,7 +12,7 @@ with open('text_file.txt', 'r') as rtxt:
     for line in rtxt.readlines(30):
         print(line)
         
-Seeking to specfic file section:
+# Seeking to specfic file section:
 file_object.seek(0)
 
 # Updating a file:
