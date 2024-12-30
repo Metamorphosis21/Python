@@ -20,4 +20,4 @@ count = Counter(text.split())
 print(count)
 # Counter({'this': 2, 'is': 2, 'sample': 2, 'text': 2, 'with': 2, 'words': 2, 'several': 1, 'more': 1, 'some': 1, 'different': 1})
 for wd, ct in sorted(count.items()):
-    print(f'{wd}: {ct}')
+    print(f'{wd:<10} {ct}')
