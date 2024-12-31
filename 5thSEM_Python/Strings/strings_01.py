@@ -1,4 +1,3 @@
-
 # Formatting strings
 # Concatenating and repeating strings
 # Striping whitespaces
@@ -36,7 +35,8 @@ import re
 # print(re.split(',','This,is,basic,string,to,check,spilt, method',maxsplit = 3))
 
 # re.search(pattern, string) - Search for the first occurrence of the pattern in the string.
-# res = re.search('to','This is basic string to check search method')
+# res = re.search('to','This is basic string to check search method').group()
+# print(res)
 # print(res.group())
 
 # Notes++
