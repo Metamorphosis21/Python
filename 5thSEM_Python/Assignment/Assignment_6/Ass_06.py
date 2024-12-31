@@ -122,7 +122,7 @@ import numpy as np
 # print(arr)
 
 # Pandas: 
-import pandas as pd
+# import pandas as pd
 # 18. 
 # data = {'A':[1,2,3], 'B':[4,5,6], 'C':[7,8,9]}
 # df = pd.DataFrame(data)

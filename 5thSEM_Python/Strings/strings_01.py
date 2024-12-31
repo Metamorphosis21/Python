@@ -24,19 +24,19 @@
 import re
 
 # re.fullmatch() - Determine if the regular expression matches the entire string.
-pattern = '011245'
-print("Match" if re.fullmatch('[A-Z][a-z]*', 'E') else "No match")
+# pattern = '011245'
+# print("Match" if re.fullmatch('[A-Z]*[a-z]*', 'EaEa') else "No match")
 
 # re.sub(pattern, replacement, string) - Replace all occurrences of the pattern in the string with the replacement string.
-print(re.sub(r'_', ' ', 'This_is_basic_string_'))
-print(re.sub(r'_', ' ', 'This_is_basic_string_',count = 2))
+# print(re.sub(r'_', ' ', 'This_is_basic_string_'))
+# print(re.sub(r'_', ' ', 'This_is_basic_string_',count = 2))
 
 # re.split(pattern, string, maxsplit) - Split the string into a list of substrings.
-print(re.split(',','This,is,basic,string,to,check,spilt, method'))
-print(re.split(',','This,is,basic,string,to,check,spilt, method',maxsplit = 3))
+# print(re.split(',','This,is,basic,string,to,check,spilt, method'))
+# print(re.split(',','This,is,basic,string,to,check,spilt, method',maxsplit = 3))
 
 # re.search(pattern, string) - Search for the first occurrence of the pattern in the string.
-res = re.search('to','This is basic string to check search method')
-print(res.group())
+# res = re.search('to','This is basic string to check search method')
+# print(res.group())
 
 # Notes++
