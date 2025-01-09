@@ -1,3 +1,1 @@
-Text Content 01
-Binary Content 02
-Text Content 03
+New Text Content

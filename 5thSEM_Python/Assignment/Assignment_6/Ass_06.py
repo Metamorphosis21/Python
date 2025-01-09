@@ -94,7 +94,7 @@ import numpy as np
 # print(checkboard)
 
 # 14. 
-# arr = np.random.randint(0,100,(5,5))
+# arr = np.random.randint(0,10,(2,5))
 # print(arr)
 # print(np.bincount(arr.flatten()))
 

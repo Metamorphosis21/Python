@@ -10,7 +10,7 @@
 # if s_name in mark_dict:
 #     print("Mark of the student is: ", mark_dict[s_name])
 
-# 3.
+# 3. 
 # n = int(input("Enter number of entries: "))
 # dict = {}
 # for z in range(n):
@@ -60,15 +60,13 @@
 #     '8': 'eight',
 #     '9': 'nine'
 #     }
-#     # print(' '.join(num_words[d] for d in str(num)).capitalize())
 #     return(' '.join(num_words[d] for d in str(num)).capitalize())
-# # num_to_words(123)
 # print(num_to_words(123))
     
 # 12. 
 # sent = 'This is a sentence to test a this to TEST'
 # sent_list = sent.lower().split()
-# dict_dup = {w.lower(): sent_list.count(w.lower())-1 for w in sent_list if sent_list.count(w.lower())>1}
+# dict_dup = {w: sent_list.count(w)-1 for w in sent_list if sent_list.count(w)>1}
 # print(dict_dup)
 
 
@@ -79,6 +77,7 @@
 
 # 14. 
 # str = "Hello, World!"
+# str = "zzz"
 # print(len(set(s for s in str)))
 
 # 15.
