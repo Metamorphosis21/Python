@@ -5,7 +5,7 @@ import numpy as np
 # print(np.full((2,5),7,int))
 
 # 2. 
-# arr = np.arange(4).reshape((2,2))
+# arr = np.arange(4).reshape(2,2)
 # print(arr)
 # print(arr**3)
 # print(arr+7)
@@ -43,7 +43,6 @@ import numpy as np
 # arrv = arr.ravel()
 # print(arrv)   a
 
-
 # 7.
 # arr = np.array([1,1,1,1,1,2,2,3,3,2,2,2,1,1,1,4,4,5,6,7,8,6,4,3,5,3,2,2,4,5,6])
 # print(arr.sum(), arr.min(), arr.max())
@@ -63,17 +62,19 @@ import numpy as np
 # def format_2d_array(arr):
 #     max_width = len(str(arr.max()))
 #     return "\n".join(["\t".join(f"{n}" for n in row)for row in arr])
-# arr = np.random.randint(0,100,(3,3))
+# arr = np.random.randint(11,1200,(3,3))
 # print(format_2d_array(arr))
 
 # 10. 
-# arr = np.arange(1,16).reshape((3,5))
+# arr = np.arange(1,16).reshape(3,5)
 # print(arr)
 # print(f"Row 2: {arr[1]}")
-# print(f"Col 5: {arr[:,-1]}")
+# print(f"Col 5: {arr[:,0]}")
 # print(f"Row 0,1: {arr[[0,1]]}")
+# print(f"Col 0,1: {arr[:,[0,1]]}")
+# print(f"Col 0:2: {arr[:,1:4]}")
 # print(f"Element [1,4]: {arr[1,4]}")
-# print(f"Element [:2,[0,2,4]]: {arr[:2,[0,2,4]]}")
+# print(f"Element [:,[0,2,4]]:\n {arr[:3,[0,2,4]]}")
 
 # 11. 
 # arr1 = np.array([[0,1],[2,3]])
@@ -98,7 +99,7 @@ import numpy as np
 # print(checkboard)
 
 # 14. 
-# arr = np.random.randint(0,10,(2,5))
+# arr = np.random.randint(0,99,(2,5))
 # print(arr)
 # print(np.bincount(arr.flatten()))
 
@@ -112,11 +113,11 @@ import numpy as np
 # print(mean_median(arr2))
 # print(mean_median(arr3))
 
-# 16. 
+# 16.
 # arr = np.random.randint(10,100,(9,9,2))
 # print(arr)
 # ext_arr = arr[1:6,2:7]
-# print(ext_arr)
+# print("-- ", ext_arr)
 
 # 17.
 # arr = np.random.randint(10,20,(4,4))
@@ -125,20 +126,21 @@ import numpy as np
 # arr = np.sort(arr,axis=1)
 # print(arr)
 
-# Pandas: 
-# import pandas as pd
+# Pandas:
+import pandas as pd
 # 18. 
 # data = {'A':[1,2,3], 'B':[4,5,6], 'C':[7,8,9]}
 # df = pd.DataFrame(data)
 # print(df)
 # print(df.iloc[:,0])
 
-# 19. 
+# 19.
 # s1 = [1,2,3,4]
 # s2 = [5,2,3,8]
 # pds1 = pd.Series(s1)
 # pds2 = pd.Series(s2)
 # print(pds1,'\n',pds2)
+# print(~pds1.isin(pds2))
 # res = pds1[~pds1.isin(pds2)]
 # print(res)
 
@@ -147,7 +149,7 @@ import numpy as np
 # print(pds.value_counts())
 # print(pds.idxmin(),'\t',pds.idxmax())
 
-# 21. 
+# 21.
 # data = pd.Series(['Cry', 'Apple', 'Orange', 'Sky', 'Banana'])
 # def contains_vowel(word):
 #     vowels = 'aeiouAEIOU'
@@ -180,7 +182,7 @@ import numpy as np
 # print(pds_random)
 # temperatures = pd.Series([98.9,98.9,45.5,78.2,12.3], index=['A','B','C','D','E'])
 # print(temperatures)
-# temp_dict = dict(zip(temperatures.index,temperatures.values.tolist()))
+# temp_dict = temperatures.to_dict()
 # print(temp_dict)
 
 # 23.
@@ -192,7 +194,7 @@ import numpy as np
 # print(temp['Maxine'])
 # print(temp.loc['Morning'])
 # print(temp.loc[['Morning','Evening']])
-# print(temp[['Maxine','Amanda']])
+# print(temp.loc['Morning',['Maxine','Amanda']])
 # print(temp[['Maxine', 'Amanda']].loc[['Morning', 'Evening']])
 # print(temp.describe())
 # print(temp.T)
