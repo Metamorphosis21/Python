@@ -43,8 +43,8 @@
 # print({k : str.count(k) for k in str})
 
 # 10. 
-# str = input("Enter a string: ")
-# print({v : str.count(v.lower()) for v in 'aeiou' if str.count(v.lower())>0} )
+# str = input("Enter a string: ").lower()
+# print({v : str.count(v) for v in 'aeiou'})
 
 # 11. 
 # def num_to_words(num):
@@ -66,7 +66,7 @@
 # 12. 
 # sent = 'This is a sentence to test a this to TEST'
 # sent_list = sent.lower().split()
-# dict_dup = {w: sent_list.count(w)-1 for w in sent_list if sent_list.count(w)>1}
+# dict_dup = {w: sent_list.count(w) for w in sent_list if sent_list.count(w)>1}
 # print(dict_dup)
 
 

@@ -36,19 +36,23 @@ import numpy as np
 # print(np.array([list1, list2]))
 
 # 6. 
-# arr = np.full((2,3),2)**np.arange(6).reshape((2,3))
+# arr = np.array([2**i for i in  range(6)]).reshape(2,3)
 # print(arr)
 # arrf = arr.flatten()
 # print(arrf)
 # arrv = arr.ravel()
-# print(arrv)
+# print(arrv)   a
+
 
 # 7.
-# arr = np.array([1,1,2,3,4,5,6,4,3,2,5,3,4,3,2,2,4,3,2,4,4,5,5,6,3,2,3,3,3,2,1,1,1,1])
+# arr = np.array([1,1,1,1,1,2,2,3,3,2,2,2,1,1,1,4,4,5,6,7,8,6,4,3,5,3,2,2,4,5,6])
 # print(arr.sum(), arr.min(), arr.max())
 # unique_elements, counts = np.unique(arr, return_counts=True)
+# print(unique_elements, counts)
 # for element, count in zip(unique_elements, counts):
-#     print(f'Element: {element}, Count: {count}')
+#     print("Element:{:<5} Count:{:<5}".format(element, count))
+# most_frequent_element = unique_elements[np.argmax(counts)]
+# print(f'Most frequent element: {most_frequent_element}')
 
 # 8. 
 # arr = np.linspace(1.1, 6.6, 6).reshape((2,3))
@@ -193,3 +197,5 @@ import numpy as np
 # print(temp.describe())
 # print(temp.T)
 # print(temp[sorted(temp.columns)])
+
+
