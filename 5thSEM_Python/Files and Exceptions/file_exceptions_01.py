@@ -53,22 +53,22 @@
 # print(acc_file['accounts'])
 # print(acc_file['accounts'][0])
 
-# # dispalying json text:
+# dispalying json text:
 # with open('accounts.json', 'r') as accounts:
 #     print(json.dumps(json.load(accounts), indent=4))
 
-# # Handling Execeptions:
-# # while True:
-# #     try:
-# #         n1 = int(input("Enter number 1:"))
-# #         n2 = int(input("Enter number 2:"))
-# #         res = n1/n2
-# #     except ValueError:
-# #         print("Both must be numbers")
-# #     except ZeroDivisionError:
-# #         print("Cannot divide by Zero")
-# #     else:
-# #         print(f"{n1:.3f}/{n2:.3f} = {res:.3f}")
+# Handling Execeptions:
+# while True:
+#     try:
+#         n1 = int(input("Enter number 1:"))
+#         n2 = int(input("Enter number 2:"))
+#         res = n1/n2
+#     except ValueError:
+#         print("Both must be numbers")
+#     except ZeroDivisionError:
+#         print("Cannot divide by Zero")
+#     else:
+#         print(f"{n1:.3f}/{n2:.3f} = {res:.3f}")
 
 # def try_it(value):
 #     try:
@@ -80,7 +80,7 @@
 # try_it(10.7)
 # try_it("Hello")
 
-# # try, except, else, finally clause
+# try, except, else, finally clause
 # try:
 #     print('try suite that raises an exception')
 #     int('hello')
@@ -92,7 +92,7 @@
 # finally:
 #     print('finally always executes')
 
-# # Raising exception explicitly
+# Raising exception explicitly
 # def fn1():
 #     fn2()
 # def fn2():
