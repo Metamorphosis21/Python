@@ -38,7 +38,7 @@
 # 7.
 # def is_rotational_palindrome(s):
 #     for i in range(len(s)):
-#         if (s[i:] + s[:i]) == (s[i:] + s[:i])[::-1]: ----> GPT
+#         if (s[i:] + s[:i]) == (s[i:] + s[:i])[::-1]: 
 #             return True
 #     return False
 # print(is_rotational_palindrome('aab'))
@@ -62,7 +62,7 @@
 
 # 10.  
 # def reverse_tokens(sentence):
-#     return ' '.join(sentence.split()[::-1])
+#     return ' '.join(s[::-1] for s in sentence.split()[::-1])
 # print(reverse_tokens('This is a test'))
 
 # 11.
@@ -76,29 +76,30 @@
 # 12.
 # from itertools import permutations # ---> WOW
 # def generate_three_letter_combinations(word):
-#     return [''.join(p) for p in permutations(word, 3)]
+#     return [''.join(p) for p in permutations(word, 3)], len([''.join(p) for p in permutations(word, 3)])
 # print(generate_three_letter_combinations('bathe'))
 
 # 13.
 # def remove_extra_spaces(sentence):
-    # import re
-    # return re.sub(r'\s+', ' ', sentence).strip()
-    # or
-    # return ' '.join(s.strip() for s in sentence.split())
+#     import re
+#     return re.sub(r'\s+', ' ', sentence).strip()
+#     or
+#     return ' '.join(s for s in sentence.split())
 # print(remove_extra_spaces('Hello    World  !  '))
 
 # 14.
 # def reverse_middle_half(s):
 #     n = len(s)
 #     start = n // 4
-#     end = n - n // 4
-#     return s[:start] + s[start:end][::-1] + s[end:] # ---> GPT
-# print(reverse_middle_half('abcdefghij'))
+#     end = n - start
+#     return s[:start] + s[start:end-1][::-1] + s[end:] # ---> GPT
+# print(reverse_middle_half('abcdWXYZpqrs'))
 
 # 15.
 # def substrings_of_frequency(s, freq):
 #     from collections import Counter
 #     count = Counter(s)
+#     print(count)
 #     return ''.join([char * freq for char in count if count[char] == freq])
 # print(substrings_of_frequency('aabbbccccddddd', 3))
 
@@ -222,8 +223,9 @@
 # 21.
 # import re
 # string1 = 'Python Programming Language'
-# match1 = re.fullmatch(r'[A-Za-z]*', string1)
-# print(match1.group() if match1 else None)
+
+# match1 = re.fullmatch(r'[A-Za-z]+', string1)
+# print(match1.group() if match1 else False)
 
 # match2 = re.sub(r'Programming', 'Coding', string1)
 # print(match2)
@@ -258,11 +260,15 @@
 # 25.
 # import re
 # def analyze_string(s):
-#     digits = len(re.findall(r'\d', s))
-#     non_digits = len(re.findall(r'\D', s))
-#     whitespaces = len(re.findall(r'\s', s))
-#     words = len(re.findall(r'\w+', s))
-#     return digits, non_digits, whitespaces, words
+#     digits, l_digits = re.findall(r'\d', s), len(re.findall(r'\d', s))
+#     non_digits, l_non_digits = re.findall(r'\D', s), len(re.findall(r'\D', s))
+#     whitespaces, l_whitespaces = re.findall(r'\s', s), len(re.findall(r'\s', s))
+#     words, l_words = re.findall(r'\w+', s), len(re.findall(r'\w+', s))
+#     return digits, non_digits, whitespaces, words, l_digits, l_non_digits, l_whitespaces, l_words
+
 # s = "This is a test string with 123 digits!"
-# digits, non_digits, whitespaces, words = analyze_string(s)
+# digits, non_digits, whitespaces, words, l_digits, l_non_digits, l_whitespaces, l_words = analyze_string(s)
 # print(f"Digits: {digits}, Non-digits: {non_digits}, Whitespace: {whitespaces}, Words: {words}")
+# print(f"Digits: {l_digits}, Non-digits: {l_non_digits}, Whitespace: {l_whitespaces}, Words: {l_words}")
+
+
